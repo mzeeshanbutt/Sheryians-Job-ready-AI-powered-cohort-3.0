@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;    
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+}
+
+
+.navbar{
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 30px; */
+    padding-right: 10px;
+    padding-top: 4px;
+}
+
+.nav-links .nav-list{
+
+    display: flex;
+    list-style: none;
+padding: 10px;
+    gap: 50px;
+    border-radius:20px;
+
+}
+#homeScreenButton:hover{
+    background-color: #e8490f;
+    border-radius: 20px;
+    transition: ease-in-out 0.3s;
+
+    display: inline-block;
+}
+#aboutUSScreenButton:hover{
+    background-color: #e8490f;
+    border-radius: 20px;
+    display: inline-block;
+    transition: ease-in-out 0.3s;
+
+}
+
+#blogsScreenButton:hover{
+    background-color: #e8490f;
+    border-radius: 20px;
+    display: inline-block;
+    transition: ease-in-out 0.3s;
+
+}
+#contactUsScreenButton:hover{
+    background-color: #e8490f;
+    display: inline-block;
+    transition: ease-in-out 0.3s;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+
+.getStartedButton{
+    background: #2a2a2a;
+    border: none;
+    padding: 10px 45px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+.getStartedButton:hover{
+    background-color: #e8490f;
+    transition: ease-in-out 0.3s;
+
+}
+
+.logo{
+    cursor: pointer;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+}
+
+.hero h1{
+    text-align: center;
+    color: white;
+    font-size: 140px;
+    font-weight: 900;
+    padding: 80px 100px;
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px 45px;
+}
+
+.filter .btn{
+    background: #2a2a2a;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    padding: 10px 20px;
+}
+.btn:hover{
+    background-color: rgba(118, 116, 116, 0.607);
+}
+
+.filter .active{
+    background: #e8490f;
+}
+.active:hover{
+    background-color: rgba(242, 89, 0, 0.575);
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 30px;
+}
+
+.card{
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3{
+    color: white;
+    padding: 10px 15px;
+    width: 65%;
+}
+
+.card p{
+    color: grey;
+    padding: 5px 15px 15px 15px;
+}
+
+.card .badge{
+    color: orange;
+    background: rgba(180, 70, 20, 0.7);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 15px;
+}
+.badge:hover{
+    background-color: rgba(116, 112, 112, 0.33);
+}
+#glassCard{
+    object-fit: cover
+}
