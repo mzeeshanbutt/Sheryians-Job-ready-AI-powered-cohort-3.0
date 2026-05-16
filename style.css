@@ -1,0 +1,171 @@
+/* Core Layout Settings */
+:root {
+    --bg-main: #0B0F19;      /* Deep cyber space dark background */
+    --bg-card: #161B26;      /* Slightly lighter card container background */
+    --text-primary: #F3F4F6;  /* Off-white crisp text */
+    --text-muted: #9CA3AF;    /* Soft gray for descriptions */
+    --accent-mint: #10B981;   /* Primary accent tech green */
+    --accent-glow: rgba(16, 185, 129, 0.15);
+    --border-color: #242C3D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.logo {
+    font-family: 'Fira Code', monospace;
+    color: var(--accent-mint);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-mint);
+    color: var(--accent-mint);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Content Grid Section */
+.section-title {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Interactive Dashboard Link Cards */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-num {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-right: 1.5rem;
+    font-weight: 500;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.arrow {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+/* Modern Micro-interactions on Hover */
+.card:hover {
+    border-color: var(--accent-mint);
+    box-shadow: 0 10px 25px -5px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.card:hover h3 {
+    color: var(--accent-mint);
+}
+
+.card:hover .arrow {
+    transform: translateX(4px);
+    color: var(--accent-mint);
+}
+
+/* Footer layout */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-family: 'Fira Code', monospace;
+}
+
+/* Responsive Scaling for Mobile Screens */
+@media (max-width: 600px) {
+    header h1 { font-size: 1.85rem; }
+    .card { padding: 1rem; }
+    .card-num { margin-right: 1rem; }
+}
