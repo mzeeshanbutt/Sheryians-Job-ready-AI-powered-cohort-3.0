@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 8px;
+}
+
+main {
+  height: 100%;
+  /* width: 100%; */
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 10px;
+  z-index: 100;
+}
+header .logo {
+  color: white;
+}
+header .logo h3:hover{
+    cursor: pointer;
+}
+header .logo h3 {
+  font-weight: 600;
+}
+header .buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 30px;
+}
+header .buttons .nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+}
+header .buttons #subscribe_button {
+  display: inline-block;
+  border: 1px solid;
+  padding: 10px 25px;
+  border-color: white;
+}
+header .buttons #subscribe_button:hover{
+    background-color: black;
+    border-color: black;
+    transition: ease-in-out 0.4s;
+}
+header .buttons #subscribe_button:active{
+ transition: 0.2s ease;
+
+    transform: scale(0.95)
+}
+ 
+header .buttons #about_button:hover{
+    color: black;
+    transition: ease-in-out 0.4s;
+
+}
+header .buttons #about_button:active{
+ transition: 0.8s ease;
+
+    transform: scale(0.95)
+}
+header .buttons #article_button:active{
+ transition: 0.8s ease;
+
+    transform: scale(0.95)
+}
+header .buttons #article_button:hover{
+    color: black;
+    transition: ease-in-out 0.4s;
+
+}
+
+.hero_section {
+  height: 95vh;
+  width: 100%;
+}
+.hero_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.hero_image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -19%);
+  text-align: center;
+  color: white;
+}
+.hero_container h1 {
+  font-size: 160px;
+}
+
+.hero_container h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.hero_container h3::after {
+  content: "";
+  display: block;
+  width: 29px;
+  height: 5px;
+  background-color: white;
+  margin: 10px auto 0;
+}
+
+.article_section {
+  height: 100vh;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f7f6;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  overflow: hidden;
+}
+
+.article_section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.article_section .content h2 {
+  font-size: 60px;
+  font-weight: 500;
+}
+.article_section .content h2::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 70px;
+  margin: 10px auto 0;
+  margin-bottom: 19px;
+  background-color: black;
+}
+.article_section .cards {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  /* margin-left: 285px; */
+  margin-top: 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  /* gap: 40px; */
+ }
+
+ /* .article_section .cards .card {
+  height: 100%;
+  width: 20%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 15px 30px rgb(15, 14, 14);
+}  */
+
+.article_section .cards .card:hover{
+    transition: transform 0.8 ease;
+    transform: scale(1.1) rotate(3deg);
+}
+
+  .article_section .cards .card1 {
+    height: 100%;
+    width: clamp(220px, 25%, 300px);
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 15px 30px rgb(15, 14, 14);
+  }
+  .article_section .cards .card1 img {
+    height: 46.7%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .article_section .cards .card1 p::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1.8px;
+    background-color: black;
+    margin: 80px auto 20px;
+  }
+  .article_section .cards .card1 p {
+    font-weight: 600;
+  }
+  .article_section .cards .card2 {
+    height: 100%;
+    width: clamp(220px, 25%, 300px);
+
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 15px 30px rgb(15, 14, 14);
+  }
+  .article_section .cards .card2 img {
+    height: 46.7%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .article_section .cards .card2 p::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1.8px;
+    background-color: black;
+    margin: 80px auto 20px;
+  }
+  .article_section .cards .card2 p {
+    font-weight: 600;
+  }
+  .article_section .cards .card3 {
+    height: 100%;
+    width: clamp(220px, 25%, 300px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px rgb(15, 14, 14);
+  }
+  .article_section .cards .card3 img {
+    height: 46.7%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .article_section .cards .card3 p::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1.8px;
+    background-color: black;
+    margin: 80px auto 20px;
+  }
+
+  .article_section .cards .card3 p {
+    font-weight: 600;
+  }
+  .about_section {
+    height: 99vh;
+    width: 100%;
+    display: flex;
+  }
+  .about_section .left_section {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+  }
+  .about_section .left_section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .about_section .right_section {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .about_section .right_section h2 {
+    font-size: 58px;
+    font-weight: 600;
+    margin-bottom: 98px;
+  }
+  .about_section .right_section h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: black;
+    margin: 10px auto 0;
+  }
+  .about_section .right_section p {
+    font-size: 23px;
+
+    font-weight: 600;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  .subscribe_section {
+    height: 60vh;
+    width: 100%;
+    padding: 50px 10px;
+    background-color: #f5f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+  }
+  .subscribe_section h2 {
+    font-size: 60px;
+
+    font-weight: 700;
+    text-align: center;
+  }
+  .subscribe_section h3 {
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .subscribe_section input {
+    height: 60px;
+    width: 400px;
+    border: none;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .subscribe_section input::placeholder {
+    color: #9ca3af;
+    font-size: 19px;
+    font-weight: 400;
+    opacity: 0.9;
+    padding-left: 80px;
+  }
+  .subscribe_section button {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 10px auto 0;
+    padding: 2px 26px;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+  }
+.subscribe_section button:hover{
+    color: white;
+    background-color: black;
+    transition: 0.5s ease;
+}
+.subscribe_section button:active{
+    transition: 0.5s ease;
+
+    transform: scale(0.95)
+}
+  footer {
+    height: 40vh;
+    width: 100%;
+    padding: 100px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  footer .socials_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  footer .socials_div #social {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  footer .buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .buttons .nav_link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+  }
